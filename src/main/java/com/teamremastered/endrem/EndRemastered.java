@@ -1,6 +1,5 @@
 package com.teamremastered.endrem;
 
-import com.teamremastered.endrem.config.ERConfig;
 import com.teamremastered.endrem.registers.RegisterHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +15,6 @@ public class EndRemastered {
 
     public EndRemastered() {
         MinecraftForge.EVENT_BUS.register(this);
-        ERConfig.load();
         RegisterHandler.init();
     }
 }

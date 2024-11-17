@@ -1,6 +1,5 @@
 package com.teamremastered.endrem.events;
 
-import com.teamremastered.endrem.config.ERConfig;
 import com.teamremastered.endrem.registers.ERItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
@@ -21,12 +20,6 @@ import org.jetbrains.annotations.Nullable;
 @SuppressWarnings("unused")
 @Mod.EventBusSubscriber
 public class ModEvents {
-    @SubscribeEvent
-    public static void onVillagerTradesEvent(VillagerTradesEvent event) {
-        if (ERConfig.IS_EVIL_EYE_OBTAINABLE.getRaw() && event.getType() == VillagerProfession.CLERIC) {
-            event.getTrades().get(5).add(new EREyeTrade());
-        }
-    }
 
     public static class EREyeTrade implements VillagerTrades.ItemListing {
 

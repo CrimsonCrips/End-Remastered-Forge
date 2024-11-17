@@ -3,7 +3,6 @@ package com.teamremastered.endrem.items;
 import com.teamremastered.endrem.EndRemastered;
 import com.teamremastered.endrem.blocks.AncientPortalFrame;
 import com.teamremastered.endrem.blocks.ERFrameProperties;
-import com.teamremastered.endrem.config.ERConfig;
 import com.teamremastered.endrem.registers.ERBlocks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -95,7 +94,7 @@ public class EREnderEye extends Item {
             }
             itemUse.getPlayer().displayClientMessage(Component.translatable("block.endrem.custom_eye.place"), true);
             return InteractionResult.PASS;
-        } else if (blockstate.is(Blocks.END_PORTAL_FRAME) && ERConfig.CAN_REMOVE_EYE.getRaw()) {
+        } else if (blockstate.is(Blocks.END_PORTAL_FRAME)) {
             BlockState newBlockState = blockstate.setValue(BlockStateProperties.EYE, false);
             level.setBlock(blockpos, newBlockState, 2);
             level.addFreshEntity(new ItemEntity(level, blockpos.getX(), blockpos.getY() + 1, blockpos.getZ(), new ItemStack(Items.ENDER_EYE)));
@@ -131,7 +130,7 @@ public class EREnderEye extends Item {
                     EyeOfEnder eyeofenderentity = new EyeOfEnder(levelIn, playerIn.getX(), playerIn.getY(0.5D), playerIn.getZ());
                     eyeofenderentity.setItem(itemstack);
                     eyeofenderentity.signalTo(blockpos);
-                    eyeofenderentity.surviveAfterDeath = ERConfig.EYE_BREAK_CHANCE.getRaw() <= playerIn.getRandom().nextInt(100);
+                    eyeofenderentity.surviveAfterDeath = 10 <= playerIn.getRandom().nextInt(100);
 
                     levelIn.addFreshEntity(eyeofenderentity);
                     if (playerIn instanceof ServerPlayer) {

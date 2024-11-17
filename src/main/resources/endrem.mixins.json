@@ -6,9 +6,7 @@
   "plugin": "com.teamremastered.endrem.mixin.EndRemasteredMixinPlugin",
   "mixins": [
     "EnderEyeItemMixin",
-    "PlayerEnchantMixin",
-    "StrongholdPiecesMixin",
-    "compat.MatrixEnchantingMenuMixin"
+    "StrongholdPiecesMixin"
   ],
   "minVersion": "0.8"
 }

@@ -1,6 +1,5 @@
 package com.teamremastered.endrem.mixin;
 
-import com.teamremastered.endrem.config.ERConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -20,23 +19,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EnderEyeItemMixin {
     @Inject(method = "useOn", at = @At("HEAD"), cancellable = true)
     private void endrem$useOn(UseOnContext ctx, CallbackInfoReturnable<InteractionResult> cir){
-        if (!ERConfig.USE_ENDER_EYE.getRaw()){
-            if (ctx.getLevel().getBlockState(ctx.getClickedPos()).is(Blocks.END_PORTAL_FRAME)) {
-                Player player = ctx.getPlayer();
-                if (player != null) {
-                    player.displayClientMessage(Component.translatable("block.endrem.ender_eye.use_warning"), true);
-                }
-                cir.setReturnValue(InteractionResult.PASS);
+        if (ctx.getLevel().getBlockState(ctx.getClickedPos()).is(Blocks.END_PORTAL_FRAME)) {
+            Player player = ctx.getPlayer();
+            if (player != null) {
+                player.displayClientMessage(Component.translatable("block.endrem.ender_eye.use_warning"), true);
             }
+            cir.setReturnValue(InteractionResult.PASS);
         }
     }
 
     @Inject(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;startUsingItem(Lnet/minecraft/world/InteractionHand;)V", shift = At.Shift.BEFORE), cancellable = true)
     private void endrem$use(Level level, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir){
-        if (!ERConfig.USE_ENDER_EYE.getRaw()){
-            player.displayClientMessage(Component.translatable("block.endrem.ender_eye.throw_warning"), true);
-            ItemStack item = player.getItemInHand(hand);
-            cir.setReturnValue(InteractionResultHolder.pass(item));
-        }
+        player.displayClientMessage(Component.translatable("block.endrem.ender_eye.throw_warning"), true);
+        ItemStack item = player.getItemInHand(hand);
+        cir.setReturnValue(InteractionResultHolder.pass(item));
     }
 }

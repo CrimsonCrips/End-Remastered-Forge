@@ -26,9 +26,7 @@ public class ERTabs {
                         output.accept(ERItems.COLD_EYE.get());
                         output.accept(ERItems.CORRUPTED_EYE.get());
                         output.accept(ERItems.LOST_EYE.get());
-                        output.accept(ERItems.NETHER_EYE.get());
                         output.accept(ERItems.OLD_EYE.get());
-                        output.accept(ERItems.ROGUE_EYE.get());
                         output.accept(ERItems.CURSED_EYE.get());
                         output.accept(ERItems.EVIL_EYE.get());
 
@@ -36,14 +34,10 @@ public class ERTabs {
                         output.accept(ERItems.MAGICAL_EYE.get());
                         output.accept(ERItems.WITHER_EYE.get());
 
-                        output.accept(ERItems.WITCH_EYE.get());
-                        output.accept(ERItems.UNDEAD_EYE.get());
                         output.accept(ERItems.EXOTIC_EYE.get());
 
-                        output.accept(ERItems.CRYPTIC_EYE.get());
+                        output.accept(ERItems.TOXIC_EYE.get());
 
-                        output.accept(ERItems.WITCH_PUPIL.get());
-                        output.accept(ERItems.UNDEAD_SOUL.get());
                         System.out.println("Items Registered");
                     } )
                     .build()
