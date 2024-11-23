@@ -21,7 +21,6 @@ public class ERItems {
 
 
     // chests
-    public static final RegistryObject<Item> BLACK_EYE = ITEMS.register("black_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
     public static final RegistryObject<Item> COLD_EYE = ITEMS.register("cold_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
     public static final RegistryObject<Item> CORRUPTED_EYE = ITEMS.register("corrupted_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
     public static final RegistryObject<Item> LOST_EYE = ITEMS.register("lost_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
@@ -42,4 +41,6 @@ public class ERItems {
     public static final RegistryObject<Item> TOXIC_EYE = ITEMS.register("toxic_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
 
 
-    }
+
+    public static final RegistryObject<Item> TECTONIC_EYE = ITEMS.register("tectonic_eye", () -> new EREnderEye(new Item.Properties().fireResistant().rarity(Rarity.EPIC).stacksTo(16)));
+}

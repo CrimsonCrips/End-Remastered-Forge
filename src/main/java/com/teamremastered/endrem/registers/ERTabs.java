@@ -22,13 +22,13 @@ public class ERTabs {
                     .title(Component.translatable("itemGroup.endrem.endrem_tab"))
                     .icon(() -> new ItemStack(ERItems.EXOTIC_EYE.get()))
                     .displayItems((featureFlags, output) -> {
-                        output.accept(ERItems.BLACK_EYE.get());
                         output.accept(ERItems.COLD_EYE.get());
                         output.accept(ERItems.CORRUPTED_EYE.get());
                         output.accept(ERItems.LOST_EYE.get());
                         output.accept(ERItems.OLD_EYE.get());
                         output.accept(ERItems.CURSED_EYE.get());
                         output.accept(ERItems.EVIL_EYE.get());
+                        output.accept(ERItems.TECTONIC_EYE.get());
 
                         output.accept(ERItems.GUARDIAN_EYE.get());
                         output.accept(ERItems.MAGICAL_EYE.get());

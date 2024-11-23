@@ -48,19 +48,19 @@
       "y": 90
     },
 
-    "eye=nether_eye,facing=east": {
-      "model": "endrem:block/frames/nether_frame_filled",
+    "eye=tectonic_eye,facing=east": {
+      "model": "endrem:block/frames/tectonic_frame_filled",
       "y": 270
     },
-    "eye=nether_eye,facing=north": {
-      "model": "endrem:block/frames/nether_frame_filled",
+    "eye=tectonic_eye,facing=north": {
+      "model": "endrem:block/frames/tectonic_frame_filled",
       "y": 180
     },
-    "eye=nether_eye,facing=south": {
-      "model": "endrem:block/frames/nether_frame_filled"
+    "eye=tectonic_eye,facing=south": {
+      "model": "endrem:block/frames/tectonic_frame_filled"
     },
-    "eye=nether_eye,facing=west": {
-      "model": "endrem:block/frames/nether_frame_filled",
+    "eye=tectonic_eye,facing=west": {
+      "model": "endrem:block/frames/tectonic_frame_filled",
       "y": 90
     },
 
@@ -256,19 +256,19 @@
       "y": 90
     },
 
-    "eye=cryptic_eye,facing=east": {
-      "model": "endrem:block/frames/cryptic_frame_filled",
+    "eye=toxic_eye,facing=east": {
+      "model": "endrem:block/frames/toxic_frame_filled",
       "y": 270
     },
-    "eye=cryptic_eye,facing=north": {
-      "model": "endrem:block/frames/cryptic_frame_filled",
+    "eye=toxic_eye,facing=north": {
+      "model": "endrem:block/frames/toxic_frame_filled",
       "y": 180
     },
-    "eye=cryptic_eye,facing=south": {
-      "model": "endrem:block/frames/cryptic_frame_filled"
+    "eye=toxic_eye,facing=south": {
+      "model": "endrem:block/frames/toxic_frame_filled"
     },
-    "eye=cryptic_eye,facing=west": {
-      "model": "endrem:block/frames/cryptic_frame_filled",
+    "eye=toxic_eye,facing=west": {
+      "model": "endrem:block/frames/toxic_frame_filled",
       "y": 90
     }
   }

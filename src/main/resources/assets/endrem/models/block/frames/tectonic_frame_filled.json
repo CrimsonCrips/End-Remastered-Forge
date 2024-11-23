@@ -4,7 +4,7 @@
     "bottom": "minecraft:block/end_stone",
     "top": "minecraft:block/end_portal_frame_top",
     "side": "minecraft:block/end_portal_frame_side",
-    "eye": "endrem:block/eyes/black"
+    "eye": "endrem:block/eyes/tectonic"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],
